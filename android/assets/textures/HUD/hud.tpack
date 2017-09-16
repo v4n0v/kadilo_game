@@ -1,0 +1,19 @@
+
+hud.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+hp
+  rotate: false
+  xy: 2, 5
+  size: 15, 14
+  orig: 15, 14
+  offset: 0, 0
+  index: -1
+panel
+  rotate: false
+  xy: 2, 2
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1

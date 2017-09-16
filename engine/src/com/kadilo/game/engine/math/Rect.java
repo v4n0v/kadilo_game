@@ -57,6 +57,7 @@ public class Rect {
         return halfHeight * 2f;
     }
 
+
     public void set(Rect from) {
         pos.set(from.pos);
         halfWidth = from.halfWidth;

@@ -1,0 +1,75 @@
+
+menuAtlas.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+city
+  rotate: false
+  xy: 2, 29
+  size: 254, 214
+  orig: 254, 214
+  offset: 0, 0
+  index: -1
+kdilla
+  rotate: false
+  xy: 258, 77
+  size: 778, 166
+  orig: 778, 166
+  offset: 0, 0
+  index: -1
+weapon
+  rotate: false
+  xy: 1038, 148
+  size: 779, 95
+  orig: 779, 95
+  offset: 0, 0
+  index: -1
+ded
+  rotate: false
+  xy: 1819, 174
+  size: 153, 69
+  orig: 153, 69
+  offset: 0, 0
+  index: -1
+options
+  rotate: false
+  xy: 1038, 67
+  size: 594, 79
+  orig: 594, 79
+  offset: 0, 0
+  index: -1
+newGame
+  rotate: false
+  xy: 258, 12
+  size: 635, 63
+  orig: 635, 63
+  offset: 0, 0
+  index: -1
+credits
+  rotate: false
+  xy: 895, 2
+  size: 587, 63
+  orig: 587, 63
+  offset: 0, 0
+  index: -1
+bg
+  rotate: false
+  xy: 895, 74
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+exit
+  rotate: false
+  xy: 1634, 83
+  size: 358, 63
+  orig: 358, 63
+  offset: 0, 0
+  index: -1
+checked
+  rotate: false
+  xy: 1974, 210
+  size: 33, 33
+  orig: 33, 33
+  offset: 0, 0
+  index: -1

@@ -52,6 +52,10 @@ public class Sprite extends Rect {
 
     }
 
+    public void setOpacity(){
+
+    }
+
     public void draw(SpriteBatch batch) {
         batch.draw(
                 regions[frame],

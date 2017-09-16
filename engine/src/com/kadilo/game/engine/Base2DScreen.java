@@ -23,7 +23,7 @@ public class Base2DScreen implements Screen, InputProcessor {
     protected final Game game;
 
     private final Rect screenBounds = new Rect(); //граница области рисования в px
-    private final Rect worldBounds = new Rect();  //желаемые граница проекции мировых координат
+    protected final Rect worldBounds = new Rect();  //желаемые граница проекции мировых координат
     private final Rect glBounds = new Rect(0f, 0f, 1f, 1f); //дефолтные границы проекции мир - gl
 
     /**

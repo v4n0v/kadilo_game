@@ -16,6 +16,6 @@ public class Sprite2DTexture extends Texture {
 
     public Sprite2DTexture(FileHandle file) {
         super(file, true);
-        setFilter(Texture.TextureFilter.MipMapLinearNearest, Texture.TextureFilter.Linear);
+        setFilter(Texture.TextureFilter.MipMapLinearNearest, TextureFilter.Nearest);
     }
 }
