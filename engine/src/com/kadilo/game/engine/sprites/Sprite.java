@@ -106,6 +106,14 @@ public class Sprite extends Rect {
         isDestroyed = false;
     }
 
+    public void flipHorizontal( ){
+        regions[frame].flip(true, false);
+    }
+
+    public void flipVertical( ){
+        regions[frame].flip(false, true);
+    }
+
     @Override
     public String toString() {
         return "Sprite: " + " angle = " + angle + " scale = " + scale + " " + super.toString();

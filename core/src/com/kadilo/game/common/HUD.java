@@ -12,8 +12,8 @@ import com.kadilo.game.engine.sprites.Sprite;
  */
 
 public class HUD {
-    private Sprite panel;
-    TextureAtlas atlas;
+    public Sprite panel;
+    private TextureAtlas atlas;
     private int hp;
     private Sprite hpSprite;
     private int score;
@@ -26,7 +26,7 @@ public class HUD {
 
     public void resize(Rect worldBounds){
         panel.setWidth(worldBounds.getWidth());
-        panel.setHeight(worldBounds.getHalfHeight()/2);
+        panel.setHeight(worldBounds.getHalfHeight()/3);
         panel.setBottom(worldBounds.getBottom());
     }
 

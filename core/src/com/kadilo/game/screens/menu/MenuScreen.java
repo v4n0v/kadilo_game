@@ -63,7 +63,7 @@ public class MenuScreen extends Base2DScreen implements ActionListener{
         super.show();
         atlas = new TextureAtlas("textures/menu/menuAtlas.tpack");
 
-         font=new Font("fonts/font.fnt", "fonts/font.png");
+        font=new Font("fonts/font1.fnt", "fonts/font1.png");
         font.setWorldSize(FONT_SIZE);
 
         menuCharacter=new MenuCharacter(atlas);
@@ -142,8 +142,6 @@ public class MenuScreen extends Base2DScreen implements ActionListener{
             btnCredits.draw(batch);
             btnExit.draw(batch);
             btnOptions.draw(batch);
-
-        font.draw(batch, "H", worldBounds.getLeft(), worldBounds.getTop());
 
             checker.draw(batch);
 
