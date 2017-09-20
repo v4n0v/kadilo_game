@@ -3,7 +3,6 @@ package com.kadilo.game.engine.ui;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.math.Vector2;
 import com.kadilo.game.engine.sprites.Sprite;
-import com.kadilo.game.engine.sprites.SpriteContainer;
 
 
 public class ScaledTouchUpButton extends Sprite{

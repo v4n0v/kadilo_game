@@ -99,7 +99,7 @@ public class Character extends Sprite {
                frame= turnFrames[turnFrames.length-1-frameTurnCnt];
             else frame = turnFrames[frameTurnCnt];
 
-            System.out.println("frame=" + frame + ", frameCnt=" + frameTurnCnt + ", []frames=" + Arrays.toString(turnFrames ));
+            //System.out.println("frame=" + frame + ", frameCnt=" + frameTurnCnt + ", []frames=" + Arrays.toString(turnFrames ));
 
             frameTurnCnt++;
 
