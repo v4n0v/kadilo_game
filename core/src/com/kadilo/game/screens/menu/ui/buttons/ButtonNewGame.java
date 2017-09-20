@@ -13,7 +13,7 @@ import com.kadilo.game.engine.ui.SignChecker;
 public class ButtonNewGame extends ScaledSignedButton {
    // private Sprite orientir;
     private float height;
-    public ButtonNewGame(TextureRegion region, ActionListener listener, TextureAtlas atlas, float height, SignChecker checker) {
+    public ButtonNewGame(com.badlogic.gdx.graphics.g2d.Sprite region, ActionListener listener, TextureAtlas atlas, float height, SignChecker checker) {
         super(region, listener, atlas, height, checker );
 
         this.height=height;
@@ -23,6 +23,7 @@ public class ButtonNewGame extends ScaledSignedButton {
     @Override
     public boolean touchDown(Vector2 touch, int pointer) {
         System.out.println("new game touch");
+
         return super.touchDown(touch, pointer);
     }
 }

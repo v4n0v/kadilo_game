@@ -17,7 +17,7 @@ public class MainCharacter extends Character{
     private HUD hud;
     private TextureRegion[] rotateRegions;
     private TextureRegion[] runRegions;
-    private final Vector2 v0 = new Vector2(0.6f, 0f);
+    private final Vector2 v0 = new Vector2(0.7f, 0f);
 
 
     public MainCharacter(TextureAtlas atlas, int cols, int rows, int frames, HUD hud, Rect worldBounds) {
@@ -130,6 +130,7 @@ public class MainCharacter extends Character{
             position = Position.RIGHT;
         } else state=State.WALKING;
 
+//        if (state==State.WALKING)
            v.set(v0);
     }
 
@@ -141,7 +142,7 @@ public class MainCharacter extends Character{
             position = Position.LEFT;
         } else state=State.WALKING;
 
-
+//        if (state==State.WALKING)
             v.set(v0).rotate(180);
     }
 

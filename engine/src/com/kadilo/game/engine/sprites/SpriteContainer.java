@@ -1,48 +1,46 @@
 package com.kadilo.game.engine.sprites;
 
-import com.badlogic.gdx.graphics.g2d.Batch;
+/**
+ * Created by avetc on 18.09.2017.
+ */
+
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.math.Vector2;
-
-import com.badlogic.gdx.utils.NumberUtils;
 import com.kadilo.game.engine.math.Rect;
-import com.kadilo.game.engine.utils.Regions;
-
-import static com.badlogic.gdx.graphics.g2d.Batch.C1;
-import static com.badlogic.gdx.graphics.g2d.Batch.C2;
-import static com.badlogic.gdx.graphics.g2d.Batch.C3;
-import static com.badlogic.gdx.graphics.g2d.Batch.C4;
 
 /**
  * Created by avetc on 11.09.2017.
  */
 
-public class Sprite extends Rect {
+public class SpriteContainer extends Rect {
 
     protected float angle;
     protected float scale = 1f;
-    protected TextureRegion[] regions;
+    ///protected TextureRegion[] regions;
     protected int frame;
-    static final int VERTEX_SIZE = 2 + 1 + 2;
-    static final int SPRITE_SIZE = 4 * VERTEX_SIZE;
 
+    protected  com.badlogic.gdx.graphics.g2d.Sprite[] regions;
     private boolean isDestroyed;
-    final float[] vertices = new float[SPRITE_SIZE];
 
-    public Sprite() {
+
+    public SpriteContainer() {
     }
 
-    public Sprite(TextureRegion region) {
+    public SpriteContainer(com.badlogic.gdx.graphics.g2d.Sprite region) {
         if(region == null) throw new RuntimeException("Create Sprite with null region");
-        regions = new TextureRegion[1];
+        //regions = new TextureRegion[1];
+        regions = new com.badlogic.gdx.graphics.g2d.Sprite[1];
         regions[0] = region;
     }
-
-    public Sprite(TextureRegion region, int rows, int cols, int frames) {
-        regions = Regions.split(region, rows, cols, frames);
-    }
-
+    //
+//    public Sprite(TextureRegion region, int rows, int cols, int frames) {
+//        regions = Regions.split(region, rows, cols, frames);
+//    }
+//    public Sprite(com.badlogic.gdx.graphics.g2d.Sprite sprite) {
+//        if(sprite == null) throw new RuntimeException("Create Sprite with null region");
+//        regions = new TextureRegion[1];
+//        regions[0] = sprite;
+//    }
     public void resize(Rect worldBounds) {
     }
 
@@ -73,6 +71,7 @@ public class Sprite extends Rect {
                 halfWidth, halfHeight,
                 getWidth(), getHeight(),
                 scale, scale, angle
+
         );
     }
 
@@ -146,4 +145,5 @@ public class Sprite extends Rect {
         return "Sprite: " + " angle = " + angle + " scale = " + scale + " " + super.toString();
     }
 }
+
 

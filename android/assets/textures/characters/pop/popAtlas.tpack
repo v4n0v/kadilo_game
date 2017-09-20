@@ -1,0 +1,26 @@
+
+popAtlas.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+popFull
+  rotate: false
+  xy: 2, 2
+  size: 380, 64
+  orig: 380, 64
+  offset: 0, 0
+  index: -1
+popRotation
+  rotate: false
+  xy: 384, 2
+  size: 304, 64
+  orig: 304, 64
+  offset: 0, 0
+  index: -1
+popRun
+  rotate: false
+  xy: 690, 2
+  size: 128, 64
+  orig: 128, 64
+  offset: 0, 0
+  index: -1

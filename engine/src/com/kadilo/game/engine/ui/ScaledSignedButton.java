@@ -1,5 +1,6 @@
 package com.kadilo.game.engine.ui;
 
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.math.Vector2;
@@ -18,12 +19,15 @@ public class ScaledSignedButton extends Sprite {
     private final ActionListener listener;
     float height;
     private SignChecker checker;
+    float alpha;
 
+    SpriteBatch batch;
     public ScaledSignedButton(TextureRegion region, ActionListener listener, TextureAtlas atlas, float height, SignChecker checker) {
-            super(region);
+            super(region, 2, 1, 2);
             this.listener = listener;
             this.height=height;
-        this. checker = checker;
+             this. checker = checker;
+        frame=1;
         }
 
         @Override
@@ -31,7 +35,7 @@ public class ScaledSignedButton extends Sprite {
             if(pressed || !isMe(touch)) return false;
             this.pointer = pointer;
             scale=getScale()*0.9f;
-
+            frame=0;
             checker.set(this, 0.025f,0.025f);
             pressed = true;
             return true;
@@ -39,6 +43,7 @@ public class ScaledSignedButton extends Sprite {
 
 
     public void set(Sprite orientir, float margin){
+        alpha=0;
         pos.set(orientir.pos);
         setHeightProportion(height);
         setTop(orientir.getBottom()-margin);
@@ -52,10 +57,17 @@ public class ScaledSignedButton extends Sprite {
                 listener.actionPerformed(this);
                 checker.hide();
                 scale = 1f;
+                frame=0;
                 return true;
             }
             return false;
         }
 
-
+//    @Override
+//    public void draw(SpriteBatch batch) {
+//
+//        batch.begin();
+//        batch.setColor(1, 1, 1, alpha);
+//        batch.end();
+//    }
 }

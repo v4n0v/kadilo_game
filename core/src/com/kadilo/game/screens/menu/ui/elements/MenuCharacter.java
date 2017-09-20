@@ -64,7 +64,7 @@ public class MenuCharacter extends Sprite {
         winkTimer += deltaTime;
         if (winkTimer >= winkInterval) {
             winkTimer = 0f;
-            System.out.println("wink, frame= "+frame );
+
             wink();
         }
     }

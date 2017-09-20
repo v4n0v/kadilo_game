@@ -15,6 +15,7 @@ import com.kadilo.game.engine.math.Rect;
 import com.kadilo.game.engine.sprites.Sprite;
 import com.kadilo.game.engine.ui.ActionListener;
 import com.kadilo.game.engine.ui.ScaledSignedButton;
+import com.kadilo.game.engine.ui.ScaledTouchUpButton;
 import com.kadilo.game.engine.ui.SignChecker;
 import com.kadilo.game.screens.game.GameScreenLevel1;
 import com.kadilo.game.screens.menu.ui.elements.MenuCharacter;
@@ -38,10 +39,12 @@ public class MenuScreen extends Base2DScreen implements ActionListener{
     private final float  VERTICAL_MARGIN = BUTTON_HEIGHT*1.1f;
     private static final float FONT_SIZE = 0.02f;
 
+    ///private ScaledSignedButton btnNewGame;
     private ScaledSignedButton btnNewGame;
     private ScaledSignedButton btnOptions;
     private ScaledSignedButton btnCredits;
     private ScaledSignedButton btnExit;
+
 
     private Background bg;
     private Sprite bgBottomLine;
@@ -74,8 +77,12 @@ public class MenuScreen extends Base2DScreen implements ActionListener{
         logoTxt= new Sprite(atlas.findRegion("weapon"));
         checker= new SignChecker(atlas);
 
+     //   newGameSprite = new com.badlogic.gdx.graphics.g2d.Sprite(atlas.findRegion("newGame"));
+
+      //  newGameSprite.scale(1);
       //  btnNewGame.setHeightProportion(BUTTON_HEIGHT);
         btnNewGame=new ScaledSignedButton(atlas.findRegion("newGame"), this, atlas, BUTTON_HEIGHT, checker);
+
         btnOptions =new ScaledSignedButton(atlas.findRegion("options"), this, atlas,BUTTON_HEIGHT*1.25f, checker);
         btnCredits=new ScaledSignedButton(atlas.findRegion("credits"), this, atlas,BUTTON_HEIGHT, checker);
         btnExit=new ScaledSignedButton(atlas.findRegion("exit"), this, atlas,BUTTON_HEIGHT, checker);
@@ -127,11 +134,13 @@ public class MenuScreen extends Base2DScreen implements ActionListener{
         btnOptions.update(deltaTime);
         btnCredits.update(deltaTime);
     }
+
+    float alpha=0.5f;
     private void draw() {
         Gdx.gl.glClearColor(0.7f, 0.7f, 0.7f, 1f);
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
         batch.begin();
-
+        batch.setColor(1f, 1f, 1f, 1f);
             bg.draw(batch);
             bgBottomLine.draw(batch);
             menuCharacter.draw(batch);
@@ -142,17 +151,16 @@ public class MenuScreen extends Base2DScreen implements ActionListener{
             btnCredits.draw(batch);
             btnExit.draw(batch);
             btnOptions.draw(batch);
-
             checker.draw(batch);
-
         batch.end();
+
     }
 
     @Override
     public void dispose() {
         textureBackground.dispose();
         atlas.dispose();
-       font.dispose();
+        font.dispose();
     }
 
     @Override
